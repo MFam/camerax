@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/permission_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="문제를 촬영하기 위한 카메라 권한이 필요합니다."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        android:id="@+id/request_permission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="요청하기"
+        app:layout_constraintTop_toBottomOf="@id/permission_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="requestCameraPermission"/>
+
+    <TextView
+        android:id="@+id/setting_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="만약 권한 설정 화면이 나오지 않는다면 이곳에서 직접 설정해 주세요."
+        app:layout_constraintTop_toBottomOf="@id/request_permission"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="설정"
+        app:layout_constraintTop_toBottomOf="@id/setting_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="startPermissionSettingActivity"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
